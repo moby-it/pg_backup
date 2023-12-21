@@ -1,8 +1,6 @@
 FROM postgres:15.5-bookworm
 WORKDIR /src
 
-ENV CONNECTION_STRING=connection_string
-
 RUN apt-get update && apt-get install s3cmd -y
 
 COPY backup.sh backup.sh
